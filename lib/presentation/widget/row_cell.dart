@@ -9,6 +9,7 @@ import '../styles/colors.dart';
 Widget RowCell(
   String date,
   int map,
+  id,
   String startTime,
   endTime,
   periodType,
@@ -24,11 +25,17 @@ Widget RowCell(
 
   return Row(
     children: [
-      Cell(
-        height: 12 * map,
-        width: 12,
-        text: "${dateFormat}\n${date}",
-      ),
+      id == 2
+          ? Cell(
+              height: 0,
+              width: 12,
+              text: "${dateFormat}\n${date}",
+            )
+          : Cell(
+              height: 12 * map,
+              width: 12,
+              text: "${dateFormat}\n${date}",
+            ),
       Row(
         children: [
           Cell(

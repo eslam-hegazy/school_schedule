@@ -185,6 +185,7 @@ class TableScreen extends StatelessWidget {
                                         return RowCell(
                                           e.date,
                                           cubit.map[e.date],
+                                          e.id,
                                           e.startTime,
                                           e.endTime,
                                           e.periodType,
